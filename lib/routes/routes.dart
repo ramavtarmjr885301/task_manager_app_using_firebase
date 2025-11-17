@@ -1,10 +1,10 @@
-import 'package:firebcrudapp/add_task_screen.dart';
-import 'package:firebcrudapp/category_filter_screen.dart';
-import 'package:firebcrudapp/edit_task_screen.dart';
-import 'package:firebcrudapp/home_screen.dart';
-import 'package:firebcrudapp/login_screen.dart';
+import 'package:firebcrudapp/screens/add_task_screen.dart';
+import 'package:firebcrudapp/screens/category_filter_screen.dart';
+import 'package:firebcrudapp/screens/edit_task_screen.dart';
+import 'package:firebcrudapp/screens/home_screen.dart';
+import 'package:firebcrudapp/screens/login_screen.dart';
 import 'package:firebcrudapp/routes/routes_name.dart';
-import 'package:firebcrudapp/splash_screen.dart';
+import 'package:firebcrudapp/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 class Routes {
