@@ -4,39 +4,40 @@ import 'package:firebcrudapp/screens/edit_task_screen.dart';
 import 'package:firebcrudapp/screens/home_screen.dart';
 import 'package:firebcrudapp/screens/login_screen.dart';
 import 'package:firebcrudapp/routes/routes_name.dart';
+import 'package:firebcrudapp/screens/onboarding_screen.dart';
+import 'package:firebcrudapp/screens/profile_screen.dart';
 import 'package:firebcrudapp/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 class Routes {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
-      case RoutesName.login:
+      case RoutesName.loginScreen:
         return MaterialPageRoute(builder: (context) => LoginScreen());
       case RoutesName.splashScreen:
         return MaterialPageRoute(builder: (context) => SplashScreen());
       case RoutesName.homeScreen:
         return MaterialPageRoute(builder: (context) => HomeScreen());
       case RoutesName.addTaskScreen:
-        return MaterialPageRoute(builder: (context) => const AddTaskScreen());
+        return MaterialPageRoute(builder: (context) => AddTaskScreen());
       case RoutesName.editTaskScreen:
         return MaterialPageRoute(
           builder: (context) =>
               EditTaskScreen(taskId: settings.arguments as String),
         );
       case RoutesName.categoryFilterScreen:
-        // Arguments needed: (CategorySelectedCallback, currentCategory)
-        // We will use Navigator.push directly in home_screen to pass these complex arguments.
-        // So, we can leave this route case for simple arguments or dynamic routes for now,
-        // but we still register the name.
         return MaterialPageRoute(
           builder: (context) {
-            // Placeholder: The actual navigation happens in HomeScreen
             return CategoryFilterScreen(
               onCategorySelected: (category) {},
               currentCategory: 'All',
             );
           },
         );
+      case RoutesName.profileScreen:
+        return MaterialPageRoute(builder: (context) => ProfileScreen());
+      case RoutesName.onboardingScreen:
+        return MaterialPageRoute(builder: (context) => OnboardingScreen());
       default:
         return MaterialPageRoute(
           builder: (_) {
