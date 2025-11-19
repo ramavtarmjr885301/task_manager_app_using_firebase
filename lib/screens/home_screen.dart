@@ -337,7 +337,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       MaterialPageRoute(builder: (_) => LoginScreen()),
     );
   }
-///////////////
+
   _deleteTask(DocumentSnapshot doc) async {
     try {
       await _userTasksCollection.doc(doc.id).delete();
