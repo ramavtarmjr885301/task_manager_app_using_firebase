@@ -346,7 +346,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       Fluttertoast.showToast(msg: "Error deleting task: $e");
     }
   }
-
+/////////
   _toggleTaskStatus(DocumentSnapshot doc, bool? isCompleted) async {
     if (doc.exists) {
       final newStatus = isCompleted == true ? 'completed' : 'pending';
